@@ -22,16 +22,15 @@
             background-color: var(--color-fondo);
         }
 
-        /* Estilo para la imagen de portada */
         header {
             background-color: var(--color-fondo-header);
             text-align: center;
-            padding: 0; /* Quitamos el padding para que la imagen ocupe bien el espacio */
+            padding: 0; 
         }
 
         .hero-image {
             width: 100%;
-            max-width: 600px; /* Tamaño máximo para que no se vea gigante en la compu */
+            max-width: 600px; 
             display: block;
             margin: 0 auto;
         }
@@ -85,6 +84,7 @@
 
         .btn-mas:hover { background-color: var(--color-secundario); }
 
+        /* --- NUEVOS ESTILOS PARA LA SECCIÓN DE CONTACTOS --- */
         .contact {
             background-color: white;
             padding: 40px 20px;
@@ -96,12 +96,40 @@
 
         .contact h2 { color: var(--color-secundario); margin-top: 0; }
 
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .contact-person {
+            background: #fdfbfd;
+            padding: 25px 20px;
+            border-radius: 15px;
+            border: 1px solid var(--color-acento);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+        }
+
+        .contact-person h3 {
+            color: var(--color-principal);
+            margin-top: 0;
+            border-bottom: 2px solid var(--color-acento);
+            padding-bottom: 10px;
+            font-size: 1.4em;
+        }
+
+        .contact-person p.subtitle {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
         .contact-links {
             display: flex;
             flex-direction: column;
             gap: 15px;
             align-items: center;
-            margin-top: 20px;
         }
 
         .link-contacto {
@@ -109,15 +137,15 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            background-color: #f4f0f8;
+            background-color: white;
             color: var(--color-secundario);
-            padding: 15px 30px;
+            padding: 12px 20px;
             text-decoration: none;
             border-radius: 30px;
-            font-size: 1.2em;
+            font-size: 1.1em;
             font-weight: bold;
-            width: 80%;
-            max-width: 400px;
+            width: 100%;
+            box-sizing: border-box;
             border: 1px solid var(--color-acento);
             transition: all 0.3s ease;
         }
@@ -132,7 +160,6 @@
 </head>
 <body>
 
-    <!-- ACÁ CARGAMOS LA IMAGEN DE PORTADA -->
     <header>
         <img src="imagenes/portada.jpeg" alt="Maru Flor de Loto" class="hero-image">
     </header>
@@ -149,8 +176,7 @@
                     <h3>Masajes Reductores</h3>
                     <p>Eliminación de toxinas, tonificación, y reducción de medidas corporales.</p>
                 </div>
-                <!-- Este link nos llevará a una nueva página llamada masajes.html -->
-                <a href="masajes.html" class="btn-mas">Ver más info</a>
+                <a href="masajes.html" class="btn-mas">Ver más info y fotos</a>
             </div>
 
             <div class="service-card">
@@ -158,7 +184,7 @@
                     <h3>Cabina de OZONO</h3>
                     <p>Terapia de desintoxicación, mejora de circulación y estimulación inmunológica.</p>
                 </div>
-                <a href="ozono.html" class="btn-mas">Ver más info</a>
+                <a href="ozono.html" class="btn-mas">Ver más info y fotos</a>
             </div>
 
             <div class="service-card">
@@ -166,7 +192,7 @@
                     <h3>Nails | Carito</h3>
                     <p>Soft Gel, Polgel, Kapping y Semi Esmaltado.</p>
                 </div>
-                <a href="unas.html" class="btn-mas">Ver más info</a>
+                <a href="unas.html" class="btn-mas">Ver más info y fotos</a>
             </div>
 
             <div class="service-card">
@@ -174,7 +200,7 @@
                     <h3>Maquillaje</h3>
                     <p>Servicio profesional para 15 años, egresos, fiestas y casamientos.</p>
                 </div>
-                <a href="maquillaje.html" class="btn-mas">Ver más info</a>
+                <a href="maquillaje.html" class="btn-mas">Ver más info y fotos</a>
             </div>
 
              <div class="service-card">
@@ -182,25 +208,48 @@
                     <h3>GENESIS Tattoos</h3>
                     <p>Lettering, Realismo, Fine line, Old school y más estilos.</p>
                 </div>
-                <a href="tattoos.html" class="btn-mas">Ver más info</a>
+                <a href="tattoos.html" class="btn-mas">Ver más info y fotos</a>
             </div>
         </section>
 
+        <!-- SECCIÓN DE CONTACTO ACTUALIZADA -->
         <section class="contact">
             <h2>Contacto Directo</h2>
-            <p>Hacé clic en cualquiera de las opciones para comunicarte con nosotros o ver nuestros trabajos.</p>
+            <p>Elegí con quién querés comunicarte o ver sus trabajos:</p>
             
-            <div class="contact-links">
-                <!-- Links clickeables exactos -->
-                <a href="https://wa.me/5492974750121" target="_blank" class="link-contacto">
-                    📱 WhatsApp Principal (Turnos/Consultas)
-                </a>
-                <a href="https://wa.me/5492975346376" target="_blank" class="link-contacto">
-                    📱 WhatsApp Tattoos (Génesis)
-                </a>
-                <a href="https://www.instagram.com/maruflordeloto?stkn=MXFsM3d2NWI4anY2dQ==" target="_blank" class="link-contacto">
-                    📷 Visitar Instagram
-                </a>
+            <div class="contact-grid">
+                
+                <!-- BLOQUE MARIELA -->
+                <div class="contact-person">
+                    <h3>🌸 Mariela</h3>
+                    <p class="subtitle">Masajes, Cabina de Ozono y Maquillaje</p>
+                    <div class="contact-links">
+                        <a href="https://wa.me/5492974750121" target="_blank" class="link-contacto">
+                            📱 WhatsApp Turnos
+                        </a>
+                        <a href="https://www.instagram.com/maruflordeloto?stkn=MXFsM3d2NWI4anY2dQ==" target="_blank" class="link-contacto">
+                            📷 Maru Flor de Loto
+                        </a>
+                    </div>
+                </div>
+
+                <!-- BLOQUE CAROLINA -->
+                <div class="contact-person">
+                    <h3>💅 Carolina</h3>
+                    <p class="subtitle">GENESIS Tattoos & Nails | Carito</p>
+                    <div class="contact-links">
+                        <a href="https://wa.me/5492975346376" target="_blank" class="link-contacto">
+                            📱 WhatsApp Turnos
+                        </a>
+                        <a href="https://www.instagram.com/genesis_tattoo.1997?stkn=cXc5cmw5ZGp5bDN0" target="_blank" class="link-contacto">
+                            📷 GENESIS Tattoos
+                        </a>
+                        <a href="https://www.instagram.com/nails.c_1997?stkn=MTJ1djVucnNubG93Zw==" target="_blank" class="link-contacto">
+                            📷 Nails | Carito
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </section>
     </div>
