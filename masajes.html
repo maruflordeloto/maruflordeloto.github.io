@@ -2,16 +2,173 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masajes - Maru Flor de Loto</title>
     <style>
-        body { font-family: sans-serif; background-color: #f4f0f8; text-align: center; padding: 50px; }
-        .btn-volver { background-color: #9c27b0; color: white; padding: 10px 20px; text-decoration: none; border-radius: 10px; }
+        :root {
+            --color-fondo: #f4f0f8; 
+            --color-principal: #9c27b0; 
+            --color-secundario: #6a1b9a; 
+            --color-acento: #e1bee7; 
+            --color-texto: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--color-texto);
+            background-color: var(--color-fondo);
+        }
+
+        header {
+            background-color: var(--color-secundario);
+            color: white;
+            text-align: center;
+            padding: 2em 1em;
+        }
+
+        h1 { margin: 0; font-size: 2.5em; }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Estilo para cada bloque de servicio (foto + texto) */
+        .servicio-detalle {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+            border-left: 8px solid var(--color-principal);
+        }
+
+        .servicio-detalle img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .texto-servicio {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .texto-servicio h2 {
+            color: var(--color-secundario);
+            margin-top: 0;
+            font-size: 2em;
+            border-bottom: 2px solid var(--color-acento);
+            padding-bottom: 10px;
+        }
+
+        .texto-servicio ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .texto-servicio li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.1em;
+        }
+
+        /* Usamos la florcita morada como viñeta */
+        .texto-servicio li::before {
+            content: "🪷";
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        .botones-inferiores {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--color-principal);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s;
+        }
+
+        .btn:hover { background-color: var(--color-secundario); transform: scale(1.05); }
+        
+        .btn-volver {
+            background-color: white;
+            color: var(--color-secundario);
+            border: 2px solid var(--color-secundario);
+        }
+        
+        .btn-volver:hover {
+            background-color: var(--color-acento);
+            color: var(--color-secundario);
+        }
+
     </style>
 </head>
 <body>
-    <h1>Sección de Masajes Reductores</h1>
-    <p>Acá próximamente pondremos fotos del antes y el después, detalles de la técnica y precios.</p>
-    <br><br>
-    <a href="index.html" class="btn-volver">Volver a la página principal</a>
+
+    <header>
+        <h1>Nuestros Masajes</h1>
+    </header>
+
+    <div class="container">
+
+        <!-- SECCIÓN MASAJES REDUCTORES -->
+        <div class="servicio-detalle">
+            <img src="imagenes/masaje-reductor.jpg" alt="Masajes Reductores en Maru Flor de Loto">
+            <div class="texto-servicio">
+                <h2>Masajes Reductores</h2>
+                <p>Nuestros masajes reductores están diseñados para modelar tu figura y brindarte múltiples beneficios para tu salud:</p>
+                <ul>
+                    <li>Reduce la grasa de las zonas del cuerpo</li>
+                    <li>Favorece el flujo sanguíneo</li>
+                    <li>Elimina toxinas y retenciones de líquido</li>
+                    <li>Mejora el sistema digestivo</li>
+                    <li>Mejora el drenaje linfático</li>
+                    <li>Reafirma los músculos y combate la flacidez</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SECCIÓN MASAJES PARA EMBARAZADAS -->
+        <div class="servicio-detalle">
+            <img src="imagenes/masaje-embarazada.jpg" alt="Masajes para Embarazadas en Maru Flor de Loto">
+            <div class="texto-servicio">
+                <h2>Masajes para Embarazadas</h2>
+                <p>Un momento de conexión y relajación pensado especialmente para las futuras mamás. Ayuda a aliviar tensiones musculares, reducir la hinchazón y mejorar el descanso durante esta etapa tan especial.</p>
+                <p><i>*Consultá con tu médico antes de agendar tu sesión.</i></p>
+            </div>
+        </div>
+
+        <!-- BOTONES -->
+        <div class="botones-inferiores">
+            <a href="index.html" class="btn btn-volver">⬅ Volver al inicio</a>
+            <a href="https://wa.me/5492974750121" target="_blank" class="btn">📱 Agendar tu cita</a>
+        </div>
+
+    </div>
+
 </body>
 </html>
