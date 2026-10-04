@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maru Flor de Loto - Centro de Estética y Bienestar</title>
+    <title>Maru Flor de Loto - Centro de Estética</title>
     <style>
-        /* Variables de colores basados en las imágenes (tonos violetas y grises oscuros) */
         :root {
-            --color-fondo: #f4f0f8; /* Blanco con un levísimo tono violeta */
-            --color-principal: #9c27b0; /* Violeta principal */
-            --color-secundario: #6a1b9a; /* Violeta oscuro */
-            --color-acento: #e1bee7; /* Violeta muy claro */
+            --color-fondo: #f4f0f8; 
+            --color-principal: #9c27b0; 
+            --color-secundario: #6a1b9a; 
+            --color-acento: #e1bee7; 
             --color-texto: #333;
-            --color-fondo-header: #3a3a3a; /* Gris oscuro para el header, similar a sus flyers */
+            --color-fondo-header: #2a2a2a; 
         }
 
         body {
@@ -23,29 +22,18 @@
             background-color: var(--color-fondo);
         }
 
+        /* Estilo para la imagen de portada */
         header {
             background-color: var(--color-fondo-header);
-            color: white;
             text-align: center;
-            padding: 3em 1em;
-            /* Intentamos simular el degradado de su logo */
-            background: linear-gradient(to bottom, #4a4a4a, #2a2a2a); 
+            padding: 0; /* Quitamos el padding para que la imagen ocupe bien el espacio */
         }
 
-        /* Título con estilo de la fuente de su logo */
-        h1 { 
-            margin: 0; 
-            font-size: 3em; 
-            letter-spacing: 2px; 
-            font-family: 'Brush Script MT', cursive; /* Fuente similar a la cursiva de su logo */
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        p.subtitle { 
-            font-size: 1.2em; 
-            margin-top: 10px; 
-            color: #ddd;
+        .hero-image {
+            width: 100%;
+            max-width: 600px; /* Tamaño máximo para que no se vea gigante en la compu */
+            display: block;
+            margin: 0 auto;
         }
 
         .container {
@@ -54,12 +42,7 @@
             padding: 20px;
         }
 
-        .intro {
-            text-align: center;
-            margin: 2em 0;
-            padding: 0 20px;
-        }
-
+        .intro { text-align: center; margin: 2em 0; }
         .intro h2 { color: var(--color-secundario); }
 
         .services {
@@ -75,13 +58,10 @@
             padding: 25px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
             border-top: 5px solid var(--color-principal);
-        }
-
-        .service-card:hover { 
-            transform: translateY(-5px); 
-            box-shadow: 0 8px 15px rgba(156, 39, 176, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .service-card h3 { 
@@ -91,26 +71,19 @@
             font-size: 1.5em;
         }
 
-        .service-card ul {
-            list-style-type: none;
-            padding: 0;
-            text-align: left;
+        .btn-mas {
+            display: inline-block;
+            background-color: var(--color-principal);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 20px;
+            margin-top: 15px;
+            font-weight: bold;
+            transition: background-color 0.3s;
         }
 
-        .service-card li {
-            margin-bottom: 10px;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        /* Usamos el emoji de la flor de loto como viñeta */
-        .service-card li::before {
-            content: "🪷"; 
-            position: absolute;
-            left: 0;
-            top: 0;
-            font-size: 0.9em;
-        }
+        .btn-mas:hover { background-color: var(--color-secundario); }
 
         .contact {
             background-color: white;
@@ -118,149 +91,117 @@
             text-align: center;
             margin-top: 50px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
             border: 2px solid var(--color-acento);
         }
 
         .contact h2 { color: var(--color-secundario); margin-top: 0; }
 
-        .contact-info {
+        .contact-links {
             display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
             margin-top: 20px;
         }
 
-        .contact-item {
-            font-size: 1.1em;
+        .link-contacto {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--color-principal);
-            color: white;
-            padding: 12px 25px;
+            background-color: #f4f0f8;
+            color: var(--color-secundario);
+            padding: 15px 30px;
             text-decoration: none;
-            border-radius: 25px;
-            margin-top: 20px;
+            border-radius: 30px;
+            font-size: 1.2em;
             font-weight: bold;
-            font-size: 1.1em;
-            transition: background-color 0.3s;
+            width: 80%;
+            max-width: 400px;
+            border: 1px solid var(--color-acento);
+            transition: all 0.3s ease;
         }
 
-        .btn:hover { background-color: var(--color-secundario); }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            font-size: 0.9em;
-            color: #888;
-            background-color: #e0e0e0;
+        .link-contacto:hover {
+            background-color: var(--color-acento);
+            transform: scale(1.02);
         }
+
+        footer { text-align: center; padding: 20px; margin-top: 40px; font-size: 0.9em; color: #888; }
     </style>
 </head>
 <body>
 
+    <!-- ACÁ CARGAMOS LA IMAGEN DE PORTADA -->
     <header>
-        <h1>Maru Flor de Loto</h1>
-        <p class="subtitle">Centro Integral de Estética y Bienestar</p>
+        <img src="portada.jpg" alt="Maru Flor de Loto" class="hero-image">
     </header>
 
     <div class="container">
         <section class="intro">
             <h2>Nuestros Servicios</h2>
-            <p>Descubrí todo lo que tenemos para ofrecerte, desde relajación profunda hasta detalles que resaltan tu belleza.</p>
+            <p>Seleccioná el servicio que te interesa para ver más fotos y detalles.</p>
         </section>
 
         <section class="services">
-            <!-- Servicio 1: Masajes Reductores -->
             <div class="service-card">
-                <h3>Masajes Reductores</h3>
-                <ul>
-                    <li>Elimina Toxina</li>
-                    <li>Tonifica - Modela</li>
-                    <li>Masaje Modelador</li>
-                    <li>Reduce cintura, pierna, abdomen, glúteos</li>
-                </ul>
+                <div>
+                    <h3>Masajes Reductores</h3>
+                    <p>Eliminación de toxinas, tonificación, y reducción de medidas corporales.</p>
+                </div>
+                <!-- Este link nos llevará a una nueva página llamada masajes.html -->
+                <a href="masajes.html" class="btn-mas">Ver más info y fotos</a>
             </div>
 
-            <!-- Servicio 2: Cabina de Ozono -->
             <div class="service-card">
-                <h3>Cabina de OZONO</h3>
-                <p><strong>¿Para qué sirve?</strong></p>
-                <ul>
-                    <li>Desintoxica el cuerpo</li>
-                    <li>Mejora la circulación</li>
-                    <li>Estimula el sistema inmunológico</li>
-                    <li>Elimina toxinas y metales pesados</li>
-                </ul>
+                <div>
+                    <h3>Cabina de OZONO</h3>
+                    <p>Terapia de desintoxicación, mejora de circulación y estimulación inmunológica.</p>
+                </div>
+                <a href="ozono.html" class="btn-mas">Ver más info y fotos</a>
             </div>
 
-            <!-- Servicio 3: Uñas -->
             <div class="service-card">
-                <h3>Nails | Carito</h3>
-                <ul>
-                    <li>Soft Gel</li>
-                    <li>Polgel</li>
-                    <li>Kapping</li>
-                    <li>Semi Esmaltado</li>
-                </ul>
+                <div>
+                    <h3>Nails | Carito</h3>
+                    <p>Soft Gel, Polgel, Kapping y Semi Esmaltado.</p>
+                </div>
+                <a href="unas.html" class="btn-mas">Ver más info y fotos</a>
             </div>
 
-            <!-- Servicio 4: Maquillaje -->
             <div class="service-card">
-                <h3>Servicio de Maquillaje</h3>
-                <ul>
-                    <li>15 años</li>
-                    <li>Egresos</li>
-                    <li>Fiestas</li>
-                    <li>Casamientos</li>
-                </ul>
+                <div>
+                    <h3>Maquillaje</h3>
+                    <p>Servicio profesional para 15 años, egresos, fiestas y casamientos.</p>
+                </div>
+                <a href="maquillaje.html" class="btn-mas">Ver más info y fotos</a>
             </div>
 
-             <!-- Servicio 5: Tattoos -->
              <div class="service-card">
-                <h3>GENESIS Tattoos</h3>
-                <ul>
-                    <li>Lettering</li>
-                    <li>New school</li>
-                    <li>Fine line</li>
-                    <li>Realismo</li>
-                    <li>Old school</li>
-                    <li>Microrealismo</li>
-                </ul>
+                <div>
+                    <h3>GENESIS Tattoos</h3>
+                    <p>Lettering, Realismo, Fine line, Old school y más estilos.</p>
+                </div>
+                <a href="tattoos.html" class="btn-mas">Ver más info y fotos</a>
             </div>
         </section>
 
         <section class="contact">
-            <h2>Contacto y Reservas</h2>
-            <p>¡Esperamos tu mensaje para coordinar tu turno!</p>
+            <h2>Contacto Directo</h2>
+            <p>Hacé clic en cualquiera de las opciones para comunicarte con nosotros o ver nuestros trabajos.</p>
             
-            <div class="contact-info">
-                <div class="contact-item">
-                    📱 <strong>WhatsApp Principal:</strong> 2974 - 750121
-                </div>
-                <div class="contact-item">
-                    📱 <strong>WhatsApp Tattoos:</strong> 2975 - 346376
-                </div>
-                <div class="contact-item">
-                    📷 <strong>Instagram:</strong> @maru_flordeloto
-                </div>
-                <div class="contact-item">
-                    📘 <strong>Facebook:</strong> Masajes Flor de Loto
-                </div>
-                 <div class="contact-item">
-                    📍 <strong>Ubicación:</strong> Comodoro Rivadavia, Chubut <!-- Tomé esto de tu información de contexto -->
-                </div>
+            <div class="contact-links">
+                <!-- Links clickeables exactos -->
+                <a href="https://wa.me/5492974750121" target="_blank" class="link-contacto">
+                    📱 WhatsApp Principal (Turnos/Consultas)
+                </a>
+                <a href="https://wa.me/5492975346376" target="_blank" class="link-contacto">
+                    📱 WhatsApp Tattoos (Génesis)
+                </a>
+                <a href="https://www.instagram.com/maruflordeloto?stkn=MXFsM3d2NWI4anY2dQ==" target="_blank" class="link-contacto">
+                    📷 Visitar Instagram
+                </a>
             </div>
-
-            <!-- Botón de WhatsApp con el número principal configurado para Argentina (+54 9) -->
-            <a href="https://wa.me/5492974750121" class="btn" target="_blank">Contactar por WhatsApp</a>
         </section>
     </div>
 
