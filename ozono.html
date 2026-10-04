@@ -4,30 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cabina de Ozono - Maru Flor de Loto</title>
+    <!-- CARGAMOS LAS TIPOGRAFÍAS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root { --color-fondo: #f4f0f8; --color-principal: #9c27b0; --color-secundario: #6a1b9a; --color-acento: #e1bee7; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: var(--color-fondo); }
+        body { font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; background-color: var(--color-fondo); }
         header { background-color: var(--color-secundario); color: white; text-align: center; padding: 2em 1em; }
-        h1 { margin: 0; font-size: 2.5em; }
+        
+        /* Título en cursiva */
+        h1 { font-family: 'Dancing Script', cursive; margin: 0; font-size: 3.5em; font-weight: 700; }
+        
         .container { max-width: 1000px; margin: 0 auto; padding: 30px 20px; }
-        
-        .collage {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            align-items: start;
-        }
-        .collage img {
-            width: 100%;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-            transition: transform 0.3s ease;
-        }
+        .collage { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; align-items: start; }
+        .collage img { width: 100%; height: auto; border-radius: 15px; box-shadow: 0 6px 15px rgba(0,0,0,0.15); transition: transform 0.3s ease; }
         .collage img:hover { transform: scale(1.03); }
-        
         .botones-inferiores { text-align: center; margin-top: 50px; margin-bottom: 40px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-        .btn { display: inline-block; background-color: var(--color-principal); color: white; padding: 15px 30px; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 1.1em; transition: all 0.3s; }
+        .btn { display: inline-block; background-color: var(--color-principal); color: white; padding: 15px 30px; text-decoration: none; border-radius: 30px; font-weight: 600; font-size: 1.1em; transition: all 0.3s; }
         .btn:hover { background-color: var(--color-secundario); transform: scale(1.05); }
         .btn-volver { background-color: white; color: var(--color-secundario); border: 2px solid var(--color-secundario); }
         .btn-volver:hover { background-color: var(--color-acento); color: var(--color-secundario); }
