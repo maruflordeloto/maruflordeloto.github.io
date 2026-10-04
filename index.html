@@ -3,63 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flor de Loto - Masajes Profesionales</title>
+    <title>Maru Flor de Loto - Centro de Estética y Bienestar</title>
     <style>
+        /* Variables de colores basados en las imágenes (tonos violetas y grises oscuros) */
+        :root {
+            --color-fondo: #f4f0f8; /* Blanco con un levísimo tono violeta */
+            --color-principal: #9c27b0; /* Violeta principal */
+            --color-secundario: #6a1b9a; /* Violeta oscuro */
+            --color-acento: #e1bee7; /* Violeta muy claro */
+            --color-texto: #333;
+            --color-fondo-header: #3a3a3a; /* Gris oscuro para el header, similar a sus flyers */
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            color: #4a4a4a;
-            background-color: #f9f6f0;
+            color: var(--color-texto);
+            background-color: var(--color-fondo);
         }
+
         header {
-            background-color: #8da399;
+            background-color: var(--color-fondo-header);
             color: white;
             text-align: center;
             padding: 3em 1em;
+            /* Intentamos simular el degradado de su logo */
+            background: linear-gradient(to bottom, #4a4a4a, #2a2a2a); 
         }
-        h1 { margin: 0; font-size: 2.8em; letter-spacing: 1px; }
-        p.subtitle { font-size: 1.2em; font-style: italic; margin-top: 10px; }
+
+        /* Título con estilo de la fuente de su logo */
+        h1 { 
+            margin: 0; 
+            font-size: 3em; 
+            letter-spacing: 2px; 
+            font-family: 'Brush Script MT', cursive; /* Fuente similar a la cursiva de su logo */
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        p.subtitle { 
+            font-size: 1.2em; 
+            margin-top: 10px; 
+            color: #ddd;
+        }
+
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
         }
+
         .intro {
             text-align: center;
             margin: 2em 0;
             padding: 0 20px;
         }
-        .intro h2 { color: #8da399; }
+
+        .intro h2 { color: var(--color-secundario); }
+
         .services {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
             margin-top: 30px;
         }
+
         .service-card {
             background: white;
             border-radius: 10px;
             padding: 25px;
-            flex: 1;
-            min-width: 250px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             text-align: center;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 5px solid var(--color-principal);
         }
-        .service-card:hover { transform: translateY(-5px); }
-        .service-card h3 { color: #768a80; border-bottom: 2px solid #f9f6f0; padding-bottom: 10px; }
+
+        .service-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 8px 15px rgba(156, 39, 176, 0.2);
+        }
+
+        .service-card h3 { 
+            color: var(--color-secundario); 
+            border-bottom: 2px solid var(--color-acento); 
+            padding-bottom: 10px; 
+            font-size: 1.5em;
+        }
+
+        .service-card ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .service-card li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        /* Usamos el emoji de la flor de loto como viñeta */
+        .service-card li::before {
+            content: "🪷"; 
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 0.9em;
+        }
+
         .contact {
-            background-color: #e8ecea;
+            background-color: white;
             padding: 40px 20px;
             text-align: center;
             margin-top: 50px;
             border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border: 2px solid var(--color-acento);
         }
-        .contact h2 { color: #5a6b63; margin-top: 0; }
+
+        .contact h2 { color: var(--color-secundario); margin-top: 0; }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
         .btn {
             display: inline-block;
-            background-color: #8da399;
+            background-color: var(--color-principal);
             color: white;
             padding: 12px 25px;
             text-decoration: none;
@@ -69,54 +151,121 @@
             font-size: 1.1em;
             transition: background-color 0.3s;
         }
-        .btn:hover { background-color: #5a6b63; }
+
+        .btn:hover { background-color: var(--color-secundario); }
+
         footer {
             text-align: center;
             padding: 20px;
             margin-top: 40px;
             font-size: 0.9em;
             color: #888;
+            background-color: #e0e0e0;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Flor de Loto Masajes</h1>
-        <p class="subtitle">Encontrá tu equilibrio, relajá tu cuerpo y mente</p>
+        <h1>Maru Flor de Loto</h1>
+        <p class="subtitle">Centro Integral de Estética y Bienestar</p>
     </header>
 
     <div class="container">
         <section class="intro">
-            <h2>Bienvenida a tu espacio de bienestar</h2>
-            <p>Te ofrezco un ambiente tranquilo y terapias personalizadas para ayudarte a liberar tensiones, reducir el estrés y mejorar tu calidad de vida.</p>
+            <h2>Nuestros Servicios</h2>
+            <p>Descubrí todo lo que tenemos para ofrecerte, desde relajación profunda hasta detalles que resaltan tu belleza.</p>
         </section>
 
         <section class="services">
+            <!-- Servicio 1: Masajes Reductores -->
             <div class="service-card">
-                <h3>Masaje Relajante</h3>
-                <p>Movimientos suaves y rítmicos diseñados para calmar profundamente el sistema nervioso, aliviar el estrés y promover el descanso.</p>
+                <h3>Masajes Reductores</h3>
+                <ul>
+                    <li>Elimina Toxina</li>
+                    <li>Tonifica - Modela</li>
+                    <li>Masaje Modelador</li>
+                    <li>Reduce cintura, pierna, abdomen, glúteos</li>
+                </ul>
             </div>
+
+            <!-- Servicio 2: Cabina de Ozono -->
             <div class="service-card">
-                <h3>Masaje Descontracturante</h3>
-                <p>Terapia enfocada en aliviar tensiones musculares profundas, nudos y dolores causados por malas posturas o estrés acumulado.</p>
+                <h3>Cabina de OZONO</h3>
+                <p><strong>¿Para qué sirve?</strong></p>
+                <ul>
+                    <li>Desintoxica el cuerpo</li>
+                    <li>Mejora la circulación</li>
+                    <li>Estimula el sistema inmunológico</li>
+                    <li>Elimina toxinas y metales pesados</li>
+                </ul>
             </div>
+
+            <!-- Servicio 3: Uñas -->
             <div class="service-card">
-                <h3>Piedras Calientes</h3>
-                <p>Una experiencia única que combina el masaje tradicional con el calor de piedras volcánicas para una relajación muscular total.</p>
+                <h3>Nails | Carito</h3>
+                <ul>
+                    <li>Soft Gel</li>
+                    <li>Polgel</li>
+                    <li>Kapping</li>
+                    <li>Semi Esmaltado</li>
+                </ul>
+            </div>
+
+            <!-- Servicio 4: Maquillaje -->
+            <div class="service-card">
+                <h3>Servicio de Maquillaje</h3>
+                <ul>
+                    <li>15 años</li>
+                    <li>Egresos</li>
+                    <li>Fiestas</li>
+                    <li>Casamientos</li>
+                </ul>
+            </div>
+
+             <!-- Servicio 5: Tattoos -->
+             <div class="service-card">
+                <h3>GENESIS Tattoos</h3>
+                <ul>
+                    <li>Lettering</li>
+                    <li>New school</li>
+                    <li>Fine line</li>
+                    <li>Realismo</li>
+                    <li>Old school</li>
+                    <li>Microrealismo</li>
+                </ul>
             </div>
         </section>
 
         <section class="contact">
-            <h2>Reserva tu turno</h2>
-            <p>Atención exclusiva y personalizada. Consultá disponibilidad de horarios y sacá tu turno por WhatsApp.</p>
-            <!-- Reemplazá el número 1234567890 por el número de ella con código de país, por ejemplo 54911... para Argentina -->
-            <a href="https://wa.me/5491112345678" class="btn" target="_blank">Contactar por WhatsApp</a>
+            <h2>Contacto y Reservas</h2>
+            <p>¡Esperamos tu mensaje para coordinar tu turno!</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    📱 <strong>WhatsApp Principal:</strong> 2974 - 750121
+                </div>
+                <div class="contact-item">
+                    📱 <strong>WhatsApp Tattoos:</strong> 2975 - 346376
+                </div>
+                <div class="contact-item">
+                    📷 <strong>Instagram:</strong> @maru_flordeloto
+                </div>
+                <div class="contact-item">
+                    📘 <strong>Facebook:</strong> Masajes Flor de Loto
+                </div>
+                 <div class="contact-item">
+                    📍 <strong>Ubicación:</strong> Comodoro Rivadavia, Chubut <!-- Tomé esto de tu información de contexto -->
+                </div>
+            </div>
+
+            <!-- Botón de WhatsApp con el número principal configurado para Argentina (+54 9) -->
+            <a href="https://wa.me/5492974750121" class="btn" target="_blank">Contactar por WhatsApp</a>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2024 Flor de Loto Masajes. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Maru Flor de Loto. Todos los derechos reservados.</p>
     </footer>
 
 </body>
