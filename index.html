@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maru Flor de Loto - Centro de Estética</title>
+    
+    <!-- Esta línea carga los logos de Instagram y WhatsApp -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         :root {
             --color-fondo: #f4f0f8; 
@@ -14,146 +18,33 @@
             --color-fondo-header: #2a2a2a; 
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: var(--color-texto);
-            background-color: var(--color-fondo);
-        }
-
-        header {
-            background-color: var(--color-fondo-header);
-            text-align: center;
-            padding: 0; 
-        }
-
-        .hero-image {
-            width: 100%;
-            max-width: 600px; 
-            display: block;
-            margin: 0 auto;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; color: var(--color-texto); background-color: var(--color-fondo); }
+        header { background-color: var(--color-fondo-header); text-align: center; padding: 0; }
+        .hero-image { width: 100%; max-width: 600px; display: block; margin: 0 auto; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
         .intro { text-align: center; margin: 2em 0; }
         .intro h2 { color: var(--color-secundario); }
 
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .service-card {
-            background: white;
-            border-radius: 10px;
-            padding: 25px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            text-align: center;
-            border-top: 5px solid var(--color-principal);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .service-card h3 { 
-            color: var(--color-secundario); 
-            border-bottom: 2px solid var(--color-acento); 
-            padding-bottom: 10px; 
-            font-size: 1.5em;
-        }
-
-        .btn-mas {
-            display: inline-block;
-            background-color: var(--color-principal);
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 20px;
-            margin-top: 15px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-
+        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px; }
+        .service-card { background: white; border-radius: 10px; padding: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; border-top: 5px solid var(--color-principal); display: flex; flex-direction: column; justify-content: space-between; }
+        .service-card h3 { color: var(--color-secundario); border-bottom: 2px solid var(--color-acento); padding-bottom: 10px; font-size: 1.5em; }
+        
+        .btn-mas { display: inline-block; background-color: var(--color-principal); color: white; padding: 10px 20px; text-decoration: none; border-radius: 20px; margin-top: 15px; font-weight: bold; transition: background-color 0.3s; }
         .btn-mas:hover { background-color: var(--color-secundario); }
 
-        /* --- NUEVOS ESTILOS PARA LA SECCIÓN DE CONTACTOS --- */
-        .contact {
-            background-color: white;
-            padding: 40px 20px;
-            text-align: center;
-            margin-top: 50px;
-            border-radius: 10px;
-            border: 2px solid var(--color-acento);
-        }
-
+        .contact { background-color: white; padding: 40px 20px; text-align: center; margin-top: 50px; border-radius: 10px; border: 2px solid var(--color-acento); }
         .contact h2 { color: var(--color-secundario); margin-top: 0; }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        .contact-person {
-            background: #fdfbfd;
-            padding: 25px 20px;
-            border-radius: 15px;
-            border: 1px solid var(--color-acento);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-        }
-
-        .contact-person h3 {
-            color: var(--color-principal);
-            margin-top: 0;
-            border-bottom: 2px solid var(--color-acento);
-            padding-bottom: 10px;
-            font-size: 1.4em;
-        }
-
-        .contact-person p.subtitle {
-            font-size: 0.9em;
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .contact-links {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            align-items: center;
-        }
-
-        .link-contacto {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background-color: white;
-            color: var(--color-secundario);
-            padding: 12px 20px;
-            text-decoration: none;
-            border-radius: 30px;
-            font-size: 1.1em;
-            font-weight: bold;
-            width: 100%;
-            box-sizing: border-box;
-            border: 1px solid var(--color-acento);
-            transition: all 0.3s ease;
-        }
-
-        .link-contacto:hover {
-            background-color: var(--color-acento);
-            transform: scale(1.02);
-        }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 30px; }
+        .contact-person { background: #fdfbfd; padding: 25px 20px; border-radius: 15px; border: 1px solid var(--color-acento); box-shadow: 0 4px 10px rgba(0,0,0,0.03); }
+        .contact-person h3 { color: var(--color-principal); margin-top: 0; border-bottom: 2px solid var(--color-acento); padding-bottom: 10px; font-size: 1.4em; }
+        .contact-person p.subtitle { font-size: 0.9em; color: #666; margin-bottom: 20px; }
+        .contact-links { display: flex; flex-direction: column; gap: 15px; align-items: center; }
+        
+        .link-contacto { display: flex; align-items: center; justify-content: center; gap: 10px; background-color: white; color: var(--color-secundario); padding: 12px 20px; text-decoration: none; border-radius: 30px; font-size: 1.1em; font-weight: bold; width: 100%; box-sizing: border-box; border: 1px solid var(--color-acento); transition: all 0.3s ease; }
+        .link-contacto:hover { background-color: var(--color-acento); transform: scale(1.02); }
+        
+        /* Hacemos los logos un poquito más grandes para que se luzcan */
+        .link-contacto i { font-size: 1.3em; }
 
         footer { text-align: center; padding: 20px; margin-top: 40px; font-size: 0.9em; color: #888; }
     </style>
@@ -212,40 +103,37 @@
             </div>
         </section>
 
-        <!-- SECCIÓN DE CONTACTO ACTUALIZADA -->
         <section class="contact">
             <h2>Contacto Directo</h2>
             <p>Elegí con quién querés comunicarte o ver sus trabajos:</p>
             
             <div class="contact-grid">
                 
-                <!-- BLOQUE MARIELA -->
                 <div class="contact-person">
                     <h3>🌸 Mariela</h3>
                     <p class="subtitle">Masajes, Cabina de Ozono y Maquillaje</p>
                     <div class="contact-links">
                         <a href="https://wa.me/5492974750121" target="_blank" class="link-contacto">
-                            📱 WhatsApp Turnos
+                            <i class="fab fa-whatsapp"></i> WhatsApp Turnos
                         </a>
                         <a href="https://www.instagram.com/maruflordeloto?stkn=MXFsM3d2NWI4anY2dQ==" target="_blank" class="link-contacto">
-                            📷 Maru Flor de Loto
+                            <i class="fab fa-instagram"></i> Maru Flor de Loto
                         </a>
                     </div>
                 </div>
 
-                <!-- BLOQUE CAROLINA -->
                 <div class="contact-person">
                     <h3>💅 Carolina</h3>
                     <p class="subtitle">GENESIS Tattoos & Nails | Carito</p>
                     <div class="contact-links">
                         <a href="https://wa.me/5492975346376" target="_blank" class="link-contacto">
-                            📱 WhatsApp Turnos
+                            <i class="fab fa-whatsapp"></i> WhatsApp Turnos
                         </a>
                         <a href="https://www.instagram.com/genesis_tattoo.1997?stkn=cXc5cmw5ZGp5bDN0" target="_blank" class="link-contacto">
-                            📷 GENESIS Tattoos
+                            <i class="fab fa-instagram"></i> GENESIS Tattoos
                         </a>
                         <a href="https://www.instagram.com/nails.c_1997?stkn=MTJ1djVucnNubG93Zw==" target="_blank" class="link-contacto">
-                            📷 Nails | Carito
+                            <i class="fab fa-instagram"></i> Nails | Carito
                         </a>
                     </div>
                 </div>
