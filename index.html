@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maru Flor de Loto - Centro de Estética</title>
     
-    <!-- Esta línea carga los logos de Instagram y WhatsApp -->
+    <!-- Cargamos los íconos de redes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CARGAMOS LAS NUEVAS TIPOGRAFÍAS DE GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -18,32 +23,49 @@
             --color-fondo-header: #2a2a2a; 
         }
 
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; color: var(--color-texto); background-color: var(--color-fondo); }
+        /* Aplicamos Montserrat (imprenta) a toda la página por defecto */
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            color: var(--color-texto); 
+            background-color: var(--color-fondo); 
+        }
+        
         header { background-color: var(--color-fondo-header); text-align: center; padding: 0; }
         .hero-image { width: 100%; max-width: 600px; display: block; margin: 0 auto; }
         .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        
         .intro { text-align: center; margin: 2em 0; }
-        .intro h2 { color: var(--color-secundario); }
+        
+        /* Aplicamos Dancing Script (cursiva) solo a los TÍTULOS PRINCIPALES */
+        .intro h2, .contact h2 { 
+            font-family: 'Dancing Script', cursive; 
+            color: var(--color-principal); 
+            font-size: 3em; /* La hacemos un poco más grande para que luzca */
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
 
         .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px; }
         .service-card { background: white; border-radius: 10px; padding: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; border-top: 5px solid var(--color-principal); display: flex; flex-direction: column; justify-content: space-between; }
-        .service-card h3 { color: var(--color-secundario); border-bottom: 2px solid var(--color-acento); padding-bottom: 10px; font-size: 1.5em; }
         
-        .btn-mas { display: inline-block; background-color: var(--color-principal); color: white; padding: 10px 20px; text-decoration: none; border-radius: 20px; margin-top: 15px; font-weight: bold; transition: background-color 0.3s; }
+        /* Los títulos de las tarjetas quedan en imprenta pero en negrita */
+        .service-card h3 { color: var(--color-secundario); border-bottom: 2px solid var(--color-acento); padding-bottom: 10px; font-size: 1.3em; font-weight: 600; }
+        
+        .btn-mas { display: inline-block; background-color: var(--color-principal); color: white; padding: 10px 20px; text-decoration: none; border-radius: 20px; margin-top: 15px; font-weight: 600; transition: background-color 0.3s; }
         .btn-mas:hover { background-color: var(--color-secundario); }
 
         .contact { background-color: white; padding: 40px 20px; text-align: center; margin-top: 50px; border-radius: 10px; border: 2px solid var(--color-acento); }
-        .contact h2 { color: var(--color-secundario); margin-top: 0; }
         .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 30px; }
         .contact-person { background: #fdfbfd; padding: 25px 20px; border-radius: 15px; border: 1px solid var(--color-acento); box-shadow: 0 4px 10px rgba(0,0,0,0.03); }
-        .contact-person h3 { color: var(--color-principal); margin-top: 0; border-bottom: 2px solid var(--color-acento); padding-bottom: 10px; font-size: 1.4em; }
+        
+        .contact-person h3 { color: var(--color-principal); margin-top: 0; border-bottom: 2px solid var(--color-acento); padding-bottom: 10px; font-size: 1.4em; font-weight: 600; }
         .contact-person p.subtitle { font-size: 0.9em; color: #666; margin-bottom: 20px; }
         .contact-links { display: flex; flex-direction: column; gap: 15px; align-items: center; }
         
-        .link-contacto { display: flex; align-items: center; justify-content: center; gap: 10px; background-color: white; color: var(--color-secundario); padding: 12px 20px; text-decoration: none; border-radius: 30px; font-size: 1.1em; font-weight: bold; width: 100%; box-sizing: border-box; border: 1px solid var(--color-acento); transition: all 0.3s ease; }
+        .link-contacto { display: flex; align-items: center; justify-content: center; gap: 10px; background-color: white; color: var(--color-secundario); padding: 12px 20px; text-decoration: none; border-radius: 30px; font-size: 1.05em; font-weight: 600; width: 100%; box-sizing: border-box; border: 1px solid var(--color-acento); transition: all 0.3s ease; }
         .link-contacto:hover { background-color: var(--color-acento); transform: scale(1.02); }
-        
-        /* Hacemos los logos un poquito más grandes para que se luzcan */
         .link-contacto i { font-size: 1.3em; }
 
         footer { text-align: center; padding: 20px; margin-top: 40px; font-size: 0.9em; color: #888; }
