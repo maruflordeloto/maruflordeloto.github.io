@@ -10,14 +10,12 @@
             --color-principal: #9c27b0; 
             --color-secundario: #6a1b9a; 
             --color-acento: #e1bee7; 
-            --color-texto: #333;
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            color: var(--color-texto);
             background-color: var(--color-fondo);
         }
 
@@ -31,68 +29,36 @@
         h1 { margin: 0; font-size: 2.5em; }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 30px 20px;
         }
 
-        /* Estilo para cada bloque de servicio (foto + texto) */
-        .servicio-detalle {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 40px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
+        /* Estructura del collage/galería */
+        .collage {
+            display: grid;
+            /* Esto hace que se adapte automático al tamaño de pantalla */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
             align-items: center;
-            border-left: 8px solid var(--color-principal);
         }
 
-        .servicio-detalle img {
+        .collage img {
             width: 100%;
-            max-width: 350px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
         }
 
-        .texto-servicio {
-            flex: 1;
-            min-width: 250px;
-        }
-
-        .texto-servicio h2 {
-            color: var(--color-secundario);
-            margin-top: 0;
-            font-size: 2em;
-            border-bottom: 2px solid var(--color-acento);
-            padding-bottom: 10px;
-        }
-
-        .texto-servicio ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .texto-servicio li {
-            margin-bottom: 15px;
-            padding-left: 30px;
-            position: relative;
-            font-size: 1.1em;
-        }
-
-        /* Usamos la florcita morada como viñeta */
-        .texto-servicio li::before {
-            content: "🪷";
-            position: absolute;
-            left: 0;
-            top: 2px;
+        /* Pequeño efecto al pasar el mouse */
+        .collage img:hover {
+            transform: scale(1.03);
         }
 
         .botones-inferiores {
             text-align: center;
-            margin-top: 40px;
+            margin-top: 50px;
             margin-bottom: 40px;
             display: flex;
             justify-content: center;
@@ -124,42 +90,26 @@
             background-color: var(--color-acento);
             color: var(--color-secundario);
         }
-
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Nuestros Masajes</h1>
+        <h1>Servicio de Masajes</h1>
     </header>
 
     <div class="container">
-
-        <!-- SECCIÓN MASAJES REDUCTORES -->
-        <div class="servicio-detalle">
-            <img src="masaje-reductor.jpeg" alt="Masajes Reductores en Maru Flor de Loto">
-            <div class="texto-servicio">
-                <h2>Masajes Reductores</h2>
-                <p>Nuestros masajes reductores están diseñados para modelar tu figura y brindarte múltiples beneficios para tu salud:</p>
-                <ul>
-                    <li>Reduce la grasa de las zonas del cuerpo</li>
-                    <li>Favorece el flujo sanguíneo</li>
-                    <li>Elimina toxinas y retenciones de líquido</li>
-                    <li>Mejora el sistema digestivo</li>
-                    <li>Mejora el drenaje linfático</li>
-                    <li>Reafirma los músculos y combate la flacidez</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- SECCIÓN MASAJES PARA EMBARAZADAS -->
-        <div class="servicio-detalle">
-            <img src="masaje-embarazada.jpeg" alt="Masajes para Embarazadas en Maru Flor de Loto">
-            <div class="texto-servicio">
-                <h2>Masajes para Embarazadas</h2>
-                <p>Un momento de conexión y relajación pensado especialmente para las futuras mamás. Ayuda a aliviar tensiones musculares, reducir la hinchazón y mejorar el descanso durante esta etapa tan especial.</p>
-                <p><i>*Consultá con tu médico antes de agendar tu sesión.</i></p>
-            </div>
+        
+        <!-- GALERÍA DE IMÁGENES (COLLAGE) -->
+        <div class="collage">
+            <!-- Flyer Beneficios -->
+            <img src="beneficios.jpeg" alt="Beneficios de los masajes">
+            
+            <!-- Flyer Reductores -->
+            <img src="reductores.jpeg" alt="Masajes Reductores">
+            
+            <!-- Flyer Embarazadas -->
+            <img src="embarazadas.jpeg" alt="Masajes para embarazadas">
         </div>
 
         <!-- BOTONES -->
