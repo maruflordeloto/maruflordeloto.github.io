@@ -18,22 +18,24 @@
         
         .container { max-width: 1000px; margin: 0 auto; padding: 30px 20px; }
         
-        /* Sección del Logo */
+        /* Sección de la Portada/Logo */
         .logo-seccion { text-align: center; margin-bottom: 40px; }
-        .logo-seccion img { max-width: 250px; height: auto; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .logo-seccion img { max-width: 350px; width: 100%; height: auto; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); border: 2px solid var(--color-principal); }
         
-        .titulo-seccion { text-align: center; color: var(--color-secundario); font-size: 2em; margin-bottom: 30px; border-bottom: 2px solid var(--color-acento); padding-bottom: 10px; display: inline-block; }
+        .titulo-seccion { text-align: center; color: var(--color-secundario); font-size: 2.2em; margin-bottom: 40px; border-bottom: 2px solid var(--color-acento); padding-bottom: 10px; display: inline-block; font-family: 'Dancing Script', cursive;}
         .contenedor-titulo { text-align: center; }
 
         /* Grilla de Trabajos */
         .trabajos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px; }
         .trabajo-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-bottom: 5px solid var(--color-principal); transition: transform 0.3s; }
-        .trabajo-card:hover { transform: translateY(-5px); }
+        .trabajo-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
         .trabajo-card img { width: 100%; height: auto; display: block; }
-        .trabajo-info { padding: 20px; }
-        .trabajo-info h3 { margin-top: 0; color: var(--color-secundario); font-size: 1.3em; margin-bottom: 10px; }
-        .trabajo-info p { color: #555; margin: 0; line-height: 1.5; }
+        
+        .trabajo-info { padding: 25px 20px; }
+        .trabajo-info h3 { margin-top: 0; color: var(--color-secundario); font-size: 1.4em; margin-bottom: 10px; }
+        .trabajo-info p { color: #444; margin: 0; line-height: 1.6; font-size: 0.95em; }
 
+        /* Botones inferiores */
         .botones-inferiores { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 50px; margin-bottom: 40px; }
         .btn { display: inline-block; background-color: var(--color-principal); color: white; padding: 15px 30px; text-decoration: none; border-radius: 30px; font-weight: 600; font-size: 1.1em; transition: all 0.3s; }
         .btn:hover { background-color: var(--color-secundario); transform: scale(1.05); }
@@ -44,37 +46,47 @@
 <body>
 
     <header>
-        <h1>Servicio de tattoos</h1>
+        <h1>Servicio de Tattoos</h1>
     </header>
 
     <div class="container">
         
-        <!-- LOGO GENESIS -->
+        <!-- FLYER PRINCIPAL -->
         <div class="logo-seccion">
-            <!-- ACÁ IRÁ EL LOGO DE GENESIS -->
-            <img src="imagenes/logo-tattoos.jpeg" alt="Génesis Tattoos">
+            <img src="imagenes/flyer-tattoos.jpeg" alt="Génesis Tattoos - Información de Turnos">
         </div>
 
         <div class="contenedor-titulo">
             <h2 class="titulo-seccion">Algunos de mis trabajos</h2>
         </div>
 
-        <!-- TRABAJOS -->
+        <!-- TRABAJOS CLASIFICADOS -->
         <div class="trabajos-grid">
             
+            <!-- Estilo 1 -->
             <div class="trabajo-card">
-                <img src="imagenes/tattoo-1.jpeg" alt="Trabajo de Tattoo 1">
+                <img src="imagenes/neo-tribal.jpeg" alt="Tatuaje Neo Tribal">
                 <div class="trabajo-info">
-                    <h3>Estilo Fine Line</h3>
-                    <p>Diseño delicado y de líneas finas. Ideal para primeros tatuajes o detalles minimalistas.</p>
+                    <h3>Neo Tribal / Cybersigilism</h3>
+                    <p>Estilo futurista y oscuro que combina el tribal con formas orgánicas, líneas curvas, puntas y estética cyberpunk. 🖤</p>
                 </div>
             </div>
 
+            <!-- Estilo 2 -->
             <div class="trabajo-card">
-                <img src="imagenes/tattoo-2.jpeg" alt="Trabajo de Tattoo 2">
+                <img src="imagenes/linea-fina.jpeg" alt="Tatuaje Línea Fina">
                 <div class="trabajo-info">
-                    <h3>Realismo</h3>
-                    <p>Trabajo con sombras y detalles profundos para lograr un acabado realista y duradero.</p>
+                    <h3>Línea fina</h3>
+                    <p>Tatuajes delicados y minimalistas, realizados con trazos finos y precisos para lograr un resultado elegante y sutil. ✨</p>
+                </div>
+            </div>
+
+            <!-- Estilo 3 -->
+            <div class="trabajo-card">
+                <img src="imagenes/micro-realismo.jpeg" alt="Tatuaje Micro Realismo">
+                <div class="trabajo-info">
+                    <h3>Micro Realismo</h3>
+                    <p>Tatuajes pequeños y detallados, con sombras y precisión para lograr un efecto realista en poco espacio. 🖤</p>
                 </div>
             </div>
 
@@ -82,11 +94,9 @@
 
         <div class="botones-inferiores">
             <a href="index.html" class="btn btn-volver">⬅ Volver al inicio</a>
-            <!-- El link apunta directo al WhatsApp de Caro -->
             <a href="https://wa.me/5492975346376" target="_blank" class="btn"><i class="fab fa-whatsapp"></i> Contactar a Caro</a>
         </div>
     </div>
 
 </body>
-</html>
 </html>
