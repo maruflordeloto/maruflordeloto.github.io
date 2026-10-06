@@ -18,7 +18,6 @@
         
         .container { max-width: 1000px; margin: 0 auto; padding: 30px 20px; }
         
-        /* FLYER PRINCIPAL MÁS GRANDE */
         .logo-seccion { text-align: center; margin-bottom: 50px; }
         .logo-seccion img { max-width: 600px; width: 100%; height: auto; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); border: 2px solid var(--color-principal); }
         
@@ -31,14 +30,15 @@
         .trabajo-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-bottom: 5px solid var(--color-principal); transition: transform 0.3s; }
         .trabajo-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
         
-        /* Imágenes de uñas cuadradas */
         .img-unas { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; }
-        
-        /* Imágenes de flyers completas sin recortar */
         .img-completa { width: 100%; height: auto; display: block; }
+        
+        /* Cursor para indicar que la imagen se puede ampliar */
+        .ampliable { cursor: zoom-in; }
 
         .trabajo-info { padding: 20px; text-align: center; }
         .trabajo-info h3 { margin: 0; color: var(--color-secundario); font-size: 1.2em; }
+        .trabajo-info p { color: #444; margin-top: 10px; margin-bottom: 0; line-height: 1.5; font-size: 0.95em; }
 
         .nota-servicio { text-align: center; background-color: var(--color-acento); color: var(--color-secundario); padding: 15px; border-radius: 10px; font-weight: 600; margin-top: -15px; margin-bottom: 30px; display: inline-block; }
         .contenedor-nota { text-align: center; }
@@ -48,6 +48,12 @@
         .btn:hover { background-color: var(--color-secundario); transform: scale(1.05); }
         .btn-volver { background-color: white; color: var(--color-secundario); border: 2px solid var(--color-secundario); }
         .btn-volver:hover { background-color: var(--color-acento); color: var(--color-secundario); }
+
+        /* Estilos del VISOR DE IMÁGENES (Modal) */
+        .modal { display: none; position: fixed; z-index: 1000; padding-top: 40px; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.85); backdrop-filter: blur(5px); }
+        .modal-contenido { margin: auto; display: block; max-width: 90%; max-height: 85vh; border-radius: 10px; object-fit: contain; box-shadow: 0 5px 25px rgba(0,0,0,0.5); }
+        .cerrar-modal { position: absolute; top: 15px; right: 30px; color: #f1f1f1; font-size: 40px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        .cerrar-modal:hover, .cerrar-modal:focus { color: var(--color-acento); text-decoration: none; cursor: pointer; }
     </style>
 </head>
 <body>
@@ -58,7 +64,6 @@
 
     <div class="container">
         
-        <!-- FLYER CARITO NAILS (AHORA MÁS GRANDE) -->
         <div class="logo-seccion">
             <img src="imagenes/logo-unas.jpeg" alt="Nails Carito Flyer de Servicios">
         </div>
@@ -127,15 +132,27 @@
                 <img src="imagenes/reflexologia-sesion.jpeg" alt="Sesión de Reflexología" class="img-completa">
                 <div class="trabajo-info"><h3>Sesión de Reflexología Podal</h3></div>
             </div>
+        </div>
 
+        <!-- SUBGRUPO: FLYERS OZONO Y REFLEXOLOGÍA -->
+        <h3 class="subtitulo-grupo" style="font-size: 1.3em; color: var(--color-secundario); margin-top: 10px;">Cabina de Ozono y Reflexología</h3>
+        <div class="trabajos-grid">
             <!-- 3. Flyer Reflexología y Ozono -->
             <div class="trabajo-card">
                 <img src="imagenes/flyer-reflexo-ozono.jpeg" alt="Reflexología y Ozono" class="img-completa">
+                <div class="trabajo-info">
+                    <h3>Servicios Integrales</h3>
+                    <p>Relajá tu cuerpo, renová tu energía y cuidá tu bienestar desde la raíz.</p>
+                </div>
             </div>
 
             <!-- 4. Flyer Beneficios Cabina Ozono -->
             <div class="trabajo-card">
                 <img src="imagenes/flyer-beneficios-ozono.jpeg" alt="Beneficios Ozono" class="img-completa">
+                <div class="trabajo-info">
+                    <h3>Beneficios de la Cabina</h3>
+                    <p>Conocé todas las ventajas de nuestra cabina dermoactiva para tu salud y tu piel.</p>
+                </div>
             </div>
         </div>
         
@@ -144,12 +161,4 @@
             <p class="nota-servicio"><i class="fas fa-sparkles"></i> Estos servicios también son realizados por Caro.</p>
         </div>
 
-        <!-- BOTONES -->
-        <div class="botones-inferiores">
-            <a href="index.html" class="btn btn-volver">⬅ Volver al inicio</a>
-            <a href="https://wa.me/5492975346376" target="_blank" class="btn"><i class="fab fa-whatsapp"></i> Contactar a Caro</a>
-        </div>
-    </div>
-
-</body>
-</html>
+        <!--
