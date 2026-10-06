@@ -18,23 +18,28 @@
         
         .container { max-width: 1000px; margin: 0 auto; padding: 30px 20px; }
         
-        .logo-seccion { text-align: center; margin-bottom: 40px; }
-        .logo-seccion img { max-width: 250px; height: auto; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        /* FLYER PRINCIPAL MÁS GRANDE */
+        .logo-seccion { text-align: center; margin-bottom: 50px; }
+        .logo-seccion img { max-width: 600px; width: 100%; height: auto; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.15); border: 2px solid var(--color-principal); }
         
         .titulo-seccion { text-align: center; color: var(--color-secundario); font-size: 2.2em; margin-bottom: 20px; border-bottom: 2px solid var(--color-acento); padding-bottom: 10px; display: inline-block; font-family: 'Dancing Script', cursive; }
         .contenedor-titulo { text-align: center; margin-bottom: 20px; }
 
-        /* Subtítulos para los grupos de uñas */
         .subtitulo-grupo { color: var(--color-principal); text-align: center; font-size: 1.6em; margin-top: 30px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
 
         .trabajos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 40px; align-items: start; }
         .trabajo-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-bottom: 5px solid var(--color-principal); transition: transform 0.3s; }
         .trabajo-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
-        .trabajo-card img { width: 100%; height: auto; display: block; aspect-ratio: 1/1; object-fit: cover; }
+        
+        /* Imágenes de uñas cuadradas */
+        .img-unas { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; }
+        
+        /* Imágenes de flyers completas sin recortar */
+        .img-completa { width: 100%; height: auto; display: block; }
+
         .trabajo-info { padding: 20px; text-align: center; }
         .trabajo-info h3 { margin: 0; color: var(--color-secundario); font-size: 1.2em; }
 
-        /* Estilos para la nota de Reflexología */
         .nota-servicio { text-align: center; background-color: var(--color-acento); color: var(--color-secundario); padding: 15px; border-radius: 10px; font-weight: 600; margin-top: -15px; margin-bottom: 30px; display: inline-block; }
         .contenedor-nota { text-align: center; }
 
@@ -53,9 +58,9 @@
 
     <div class="container">
         
-        <!-- LOGO CARITO NAILS -->
+        <!-- FLYER CARITO NAILS (AHORA MÁS GRANDE) -->
         <div class="logo-seccion">
-            <img src="imagenes/logo-unas.jpeg" alt="Nails Carito">
+            <img src="imagenes/logo-unas.jpeg" alt="Nails Carito Flyer de Servicios">
         </div>
 
         <div class="contenedor-titulo">
@@ -66,22 +71,16 @@
         <h3 class="subtitulo-grupo">Kapping</h3>
         <div class="trabajos-grid">
             <div class="trabajo-card">
-                <img src="imagenes/kapping-1.jpeg" alt="Uñas Kapping">
-                <div class="trabajo-info">
-                    <h3>Kapping</h3>
-                </div>
+                <img src="imagenes/kapping-1.jpeg" alt="Uñas Kapping" class="img-unas">
+                <div class="trabajo-info"><h3>Kapping</h3></div>
             </div>
             <div class="trabajo-card">
-                <img src="imagenes/kapping-2.jpeg" alt="Uñas Kapping 2">
-                <div class="trabajo-info">
-                    <h3>Kapping</h3>
-                </div>
+                <img src="imagenes/kapping-2.jpeg" alt="Uñas Kapping 2" class="img-unas">
+                <div class="trabajo-info"><h3>Kapping</h3></div>
             </div>
             <div class="trabajo-card">
-                <img src="imagenes/kapping-3.jpeg" alt="Uñas Kapping 3">
-                <div class="trabajo-info">
-                    <h3>Kapping</h3>
-                </div>
+                <img src="imagenes/kapping-3.jpeg" alt="Uñas Kapping 3" class="img-unas">
+                <div class="trabajo-info"><h3>Kapping</h3></div>
             </div>
         </div>
 
@@ -89,16 +88,12 @@
         <h3 class="subtitulo-grupo">Soft Gel</h3>
         <div class="trabajos-grid">
             <div class="trabajo-card">
-                <img src="imagenes/softgel-1.jpeg" alt="Uñas Soft Gel">
-                <div class="trabajo-info">
-                    <h3>Soft gel</h3>
-                </div>
+                <img src="imagenes/softgel-1.jpeg" alt="Uñas Soft Gel" class="img-unas">
+                <div class="trabajo-info"><h3>Soft gel</h3></div>
             </div>
             <div class="trabajo-card">
-                <img src="imagenes/softgel-2.jpeg" alt="Uñas Soft Gel 2">
-                <div class="trabajo-info">
-                    <h3>Soft gel</h3>
-                </div>
+                <img src="imagenes/softgel-2.jpeg" alt="Uñas Soft Gel 2" class="img-unas">
+                <div class="trabajo-info"><h3>Soft gel</h3></div>
             </div>
         </div>
 
@@ -106,36 +101,47 @@
         <h3 class="subtitulo-grupo">Semi Esmaltado Permanente</h3>
         <div class="trabajos-grid">
             <div class="trabajo-card">
-                <img src="imagenes/semi-osito.jpeg" alt="Semi esmaltado con osito">
-                <div class="trabajo-info">
-                    <h3>Semi esmaltado permanente con dije de osito</h3>
-                </div>
+                <img src="imagenes/semi-osito.jpeg" alt="Semi esmaltado con osito" class="img-unas">
+                <div class="trabajo-info"><h3>Semi esmaltado con dije de osito</h3></div>
             </div>
             <div class="trabajo-card">
-                <img src="imagenes/semi-1.jpeg" alt="Semi esmaltado permanente">
-                <div class="trabajo-info">
-                    <h3>Semi esmaltado permanente</h3>
-                </div>
+                <img src="imagenes/semi-1.jpeg" alt="Semi esmaltado permanente" class="img-unas">
+                <div class="trabajo-info"><h3>Semi esmaltado permanente</h3></div>
             </div>
         </div>
 
-        <!-- SECCIÓN REFLEXOLOGÍA PODAL -->
+        <!-- SECCIÓN TERAPIAS COMPLEMENTARIAS -->
         <div class="contenedor-titulo" style="margin-top: 60px;">
-            <h2 class="titulo-seccion">Terapias Complementarias</h2>
+            <h2 class="titulo-seccion">Belleza de Pies y Terapias Complementarias</h2>
         </div>
         
-        <div class="trabajos-grid" style="grid-template-columns: 1fr; max-width: 500px; margin: 0 auto 20px auto;">
+        <div class="trabajos-grid">
+            <!-- 1. Belleza de pies -->
             <div class="trabajo-card">
-                <img src="imagenes/reflexologia.jpeg" alt="Reflexología Podal">
-                <div class="trabajo-info">
-                    <h3>Reflexología Podal</h3>
-                </div>
+                <img src="imagenes/belleza-pies.jpeg" alt="Belleza de Pies" class="img-unas">
+                <div class="trabajo-info"><h3>Belleza de Pies</h3></div>
+            </div>
+
+            <!-- 2. Foto Sesión Reflexología -->
+            <div class="trabajo-card">
+                <img src="imagenes/reflexologia-sesion.jpeg" alt="Sesión de Reflexología" class="img-completa">
+                <div class="trabajo-info"><h3>Sesión de Reflexología Podal</h3></div>
+            </div>
+
+            <!-- 3. Flyer Reflexología y Ozono -->
+            <div class="trabajo-card">
+                <img src="imagenes/flyer-reflexo-ozono.jpeg" alt="Reflexología y Ozono" class="img-completa">
+            </div>
+
+            <!-- 4. Flyer Beneficios Cabina Ozono -->
+            <div class="trabajo-card">
+                <img src="imagenes/flyer-beneficios-ozono.jpeg" alt="Beneficios Ozono" class="img-completa">
             </div>
         </div>
         
-        <!-- Aclaración de que lo hace Caro -->
+        <!-- Aclaración de Caro -->
         <div class="contenedor-nota">
-            <p class="nota-servicio"><i class="fas fa-sparkles"></i> Este servicio terapéutico también es realizado por Caro.</p>
+            <p class="nota-servicio"><i class="fas fa-sparkles"></i> Estos servicios también son realizados por Caro.</p>
         </div>
 
         <!-- BOTONES -->
