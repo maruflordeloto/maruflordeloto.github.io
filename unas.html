@@ -161,4 +161,50 @@
             <p class="nota-servicio"><i class="fas fa-sparkles"></i> Estos servicios también son realizados por Caro.</p>
         </div>
 
-        <!--
+        <!-- BOTONES -->
+        <div class="botones-inferiores">
+            <a href="index.html" class="btn btn-volver">⬅ Volver al inicio</a>
+            <a href="https://wa.me/5492975346376" target="_blank" class="btn"><i class="fab fa-whatsapp"></i> Contactar a Caro</a>
+        </div>
+    </div>
+
+    <!-- ESTRUCTURA DEL VISOR DE IMÁGENES (MODAL) -->
+    <div id="visorImagenes" class="modal">
+        <span class="cerrar-modal">&times;</span>
+        <img class="modal-contenido" id="imgAmpliadas">
+    </div>
+
+    <!-- SCRIPT PARA QUE FUNCIONE EL ZOOM -->
+    <script>
+        var modal = document.getElementById("visorImagenes");
+        var imgModal = document.getElementById("imgAmpliadas");
+        var btnCerrar = document.getElementsByClassName("cerrar-modal")[0];
+
+        // Buscar todas las imágenes de los trabajos y del logo para darles el efecto
+        var imagenes = document.querySelectorAll(".img-unas, .img-completa, .logo-seccion img");
+
+        imagenes.forEach(function(img) {
+            img.classList.add("ampliable"); // Pone el cursor de lupa
+            
+            // Cuando hacen clic, abre el fondo negro y pone la ruta de esa imagen
+            img.onclick = function(){
+                modal.style.display = "block";
+                imgModal.src = this.src;
+            }
+        });
+
+        // Cerrar tocando la X
+        btnCerrar.onclick = function() {
+            modal.style.display = "none";
+        }
+        
+        // Cerrar tocando la parte negra del fondo
+        modal.onclick = function(evento) {
+            if (evento.target !== imgModal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
