@@ -26,7 +26,7 @@
         .contenedor-titulo { text-align: center; }
 
         /* Grilla de Trabajos */
-        .trabajos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px; }
+        .trabajos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px; align-items: start; }
         .trabajo-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-bottom: 5px solid var(--color-principal); transition: transform 0.3s; }
         .trabajo-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
         .trabajo-card img { width: 100%; height: auto; display: block; }
@@ -63,7 +63,6 @@
         <!-- TRABAJOS CLASIFICADOS -->
         <div class="trabajos-grid">
             
-            <!-- Estilo 1 -->
             <div class="trabajo-card">
                 <img src="imagenes/neo-tribal.jpeg" alt="Tatuaje Neo Tribal">
                 <div class="trabajo-info">
@@ -72,7 +71,6 @@
                 </div>
             </div>
 
-            <!-- Estilo 2 -->
             <div class="trabajo-card">
                 <img src="imagenes/linea-fina.jpeg" alt="Tatuaje Línea Fina">
                 <div class="trabajo-info">
@@ -81,22 +79,6 @@
                 </div>
             </div>
 
-            <!-- Estilo 3 -->
             <div class="trabajo-card">
                 <img src="imagenes/micro-realismo.jpeg" alt="Tatuaje Micro Realismo">
                 <div class="trabajo-info">
-                    <h3>Micro Realismo</h3>
-                    <p>Tatuajes pequeños y detallados, con sombras y precisión para lograr un efecto realista en poco espacio. 🖤</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="botones-inferiores">
-            <a href="index.html" class="btn btn-volver">⬅ Volver al inicio</a>
-            <a href="https://wa.me/5492975346376" target="_blank" class="btn"><i class="fab fa-whatsapp"></i> Contactar a Caro</a>
-        </div>
-    </div>
-
-</body>
-</html>
